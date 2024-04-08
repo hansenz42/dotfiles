@@ -1,0 +1,27 @@
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+
+let mapleader=","
+"set easymotion
+set relativenumber number
+set hlsearch
+
+" tab and editor control
+nmap <c-l> <Action>(NextTab)
+nmap <c-h> <Action>(PreviousTab)
+nmap <c-w>x <Action>(MoveEditorToOppositeTabGroup)
+nmap <c-w>L <Action>(MoveEditorToOppositeTabGroup)
+nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
+nmap gh <Action>(ShowHoverInfo)
+
+" scroll option
+set scrolloff=5
+
+" input command :New to create new file
+command New action NewFile
+
+" use system clipboard
+set clipboard+=unnamed
+
+" multiple cursor mode
+set multiple-cursors
