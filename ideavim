@@ -1,5 +1,4 @@
 Plug 'preservim/nerdtree'
-Plug 'easymotion/vim-easymotion'
 
 let mapleader=","
 "set easymotion
@@ -12,6 +11,8 @@ nmap <c-h> <Action>(PreviousTab)
 nmap <c-w>x <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>L <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
+
+" hover control
 nmap gh <Action>(ShowHoverInfo)
 
 " scroll option
@@ -23,5 +24,9 @@ command New action NewFile
 " use system clipboard
 set clipboard+=unnamed
 
-" multiple cursor mode
-set multiple-cursors
+" basic key mapping
+nnoremap L $
+vnoremap H ^
+nnoremap H ^
+vnoremap L $
+nnoremap ; :
