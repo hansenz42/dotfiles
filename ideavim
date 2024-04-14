@@ -4,6 +4,11 @@ let mapleader=","
 "set easymotion
 set relativenumber number
 set hlsearch
+set surround
+set incsearch
+
+" clear the highlighted search result
+nnoremap <Leader>sc :nohlsearch<CR>
 
 " tab and editor control
 nmap <c-l> <Action>(NextTab)
@@ -18,6 +23,10 @@ nmap gh <Action>(ShowHoverInfo)
 " scroll option
 set scrolloff=5
 
+" extend selection
+map af <Action>(EditorSelectWord)
+map aF <Action>(EditorUnselectWord)
+
 " input command :New to create new file
 command New action NewFile
 
@@ -25,8 +34,8 @@ command New action NewFile
 set clipboard+=unnamed
 
 " basic key mapping
-nnoremap L $
-vnoremap H ^
-nnoremap H ^
-vnoremap L $
+"nnoremap L $
+"vnoremap H ^
+"nnoremap H ^
+"vnoremap L $
 nnoremap ; :
