@@ -6,8 +6,9 @@ set relativenumber number
 set hlsearch
 set surround
 set incsearch
+set smartcase
+set ignorecase
 
-" clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
 
 " tab and editor control
@@ -23,19 +24,29 @@ nmap gh <Action>(ShowHoverInfo)
 " scroll option
 set scrolloff=5
 
-" extend selection
-map af <Action>(EditorSelectWord)
-map aF <Action>(EditorUnselectWord)
-
 " input command :New to create new file
 command New action NewFile
 
 " use system clipboard
 set clipboard+=unnamed
 
-" basic key mapping
-"nnoremap L $
-"vnoremap H ^
-"nnoremap H ^
-"vnoremap L $
-nnoremap ; :
+" idea join
+set ideajoin
+set idearefactormode=keep
+
+" run and debug
+nnoremap <leader>d :action Debug<CR>
+nnoremap <leader>r :action Run<CR>
+nnoremap <leader>s :action Stop<CR>
+
+" navigation goto
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gf :action FileStructurePopup<CR>
+
+" code actions
+nnoremap U :action FindUsages<CR>
+nnoremap R :action RenameElement<CR>
+nnoremap -- :action OptimizeImports<CR>
+nnoremap cc :action CommentByLineComment<CR>
+nnoremap == :action ReformatCode<CR>
