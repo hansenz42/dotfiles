@@ -50,3 +50,10 @@ nnoremap R :action RenameElement<CR>
 nnoremap -- :action OptimizeImports<CR>
 nnoremap cc :action CommentByLineComment<CR>
 nnoremap == :action ReformatCode<CR>
+
+" basic mapping
+" basic key mapping
+nnoremap L $
+vnoremap H ^
+nnoremap H ^
+vnoremap L $
