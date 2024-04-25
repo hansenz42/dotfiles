@@ -1,0 +1,113 @@
+{
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "http.proxy": "http://127.0.0.1:7890",
+    "http.proxyStrictSSL": false,
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "git.autofetch": true,
+    "editor.fontSize": 14,
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "explorer.confirmDelete": false,
+    "vscode-kubernetes.log-viewer.follow": true,
+    "vscode-kubernetes.log-viewer.timestamp": false,
+    "vscode-kubernetes.log-viewer.since": -1,
+    "vscode-kubernetes.log-viewer.tail": -1,
+    "vscode-kubernetes.log-viewer.destination": "Webview",
+    "vscode-kubernetes.log-viewer.wrap": false,
+    "rust-analyzer.procMacro.ignored": {
+        
+    },
+    "workbench.tree.indent": 16,
+    "editor.indentSize": "tabSize",
+    "files.autoSave": "afterDelay",
+    "settingsSync.ignoredExtensions": [
+        
+    ],
+    "workbench.editor.enablePreview": false,
+    "remote.SSH.showLoginTerminal": true,
+    "pasteImage.path": "${currentFileNameWithoutExt}",
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "security.workspace.trust.untrustedFiles": "open",
+    "ime-and-cursor.EnglishIM": "com.apple.keylayout.ABC",
+    "ime-and-cursor.ChineseIM": "com.apple.inputmethod.SCIM.Shuangpin",
+    "ime-and-cursor.obtainIMCmd": "/usr/local/bin/im-select",
+    "ime-and-cursor.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "git.confirmSync": false,
+    "vim.enableNeovim": true,
+    "vim.handleKeys": {
+        "<C-n>": false,
+    },
+    "editor.minimap.enabled": false,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["U"],
+            "commands": ["redo"]
+        },
+     	{
+            "before": ["<leader>", "g", "d"],
+            "commands": [
+                "editor.action.peekDefinition"
+            ]
+        },
+        {
+            "before": ["<C-w>", "x"],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
+            "before": ["<C-w>", "H"],
+            "commands": [
+                "workbench.action.moveEditorToPreviousGroup"
+            ]
+        },
+        {
+            "before": ["<C-w>", "L"],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<C-j>"],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<C-w>", "c"],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "tabnine.experimentalAutoImports": true,
+    "editor.lineNumbers": "relative",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.cursorSurroundingLines": 5
+}
