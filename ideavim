@@ -18,6 +18,10 @@ nmap <c-w>x <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>L <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>c <Action>(CloseAllEditorsButActive)
+nmap <c-w>z <Action>(CloseContent)
+
+" copy and paste
+nmap <leader>p \"0p
 
 " hover control
 nmap gh <Action>(ShowHoverInfo)
