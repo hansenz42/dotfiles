@@ -15,6 +15,10 @@
     "editor.minimap.enabled": false,
     "vim.normalModeKeyBindings": [
         {
+            "before": ["<leader>", "p"],
+            "after": ["\"0p"],
+        },
+        {
             "before": ["R"],
             "commands": [
                 "editor.action.rename"
@@ -75,5 +79,6 @@
     "vim.useSystemClipboard": true,
     "vim.easymotion": true,
     "editor.lineNumbers": "relative",
-    "editor.cursorSurroundingLines": 5
+    "editor.cursorSurroundingLines": 5,
+    "workbench.tree.indent": 16
 }
