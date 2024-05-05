@@ -1,4 +1,5 @@
 {
+    "http.proxy": "http://127.0.0.1:7890",
     "remote.SSH.remotePlatform": {
         "192.168.3.100": "linux",
         "homedev": "linux"
@@ -13,6 +14,12 @@
     "files.autoSave": "afterDelay",
     "editor.minimap.enabled": false,
     "vim.normalModeKeyBindings": [
+        {
+            "before": ["R"],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
         {
             "before": ["u"],
             "commands": ["undo"]
