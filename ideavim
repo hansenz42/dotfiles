@@ -62,3 +62,5 @@ nnoremap L $
 vnoremap H ^
 nnoremap H ^
 vnoremap L $
+nnoremap K %
+vnoremap K %
