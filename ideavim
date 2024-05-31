@@ -12,19 +12,22 @@ set ignorecase
 nnoremap <Leader>sc :nohlsearch<CR>
 
 " tab and editor control
-nmap <c-l> <Action>(NextTab)
-nmap <c-h> <Action>(PreviousTab)
+nmap <c-k> <Action>(NextTab)
+nmap <c-j> <Action>(PreviousTab)
 nmap <c-w>x <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>L <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>c <Action>(CloseAllEditorsButActive)
-nmap <c-w>z <Action>(CloseContent)
 
-" copy and paste
-nmap <leader>p \"0p
+" selection control
+nnoremap <leader>w v:action EditorSelectWord<CR>
+vnoremap <leader>w :action EditorSelectWord<CR>
 
 " hover control
 nmap gh <Action>(ShowHoverInfo)
+
+" copy and paste
+nmap <leader>p \"0p
 
 " scroll option
 set scrolloff=5
@@ -32,8 +35,10 @@ set scrolloff=5
 " input command :New to create new file
 command New action NewFile
 
-" use system clipboard
-set clipboard+=unnamed
+" some clipboard settings
+set clipboard+=unnamedplus
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
 
 " idea join
 set ideajoin
@@ -56,11 +61,13 @@ nnoremap -- :action OptimizeImports<CR>
 " nnoremap cc :action CommentByLineComment<CR>
 nnoremap == :action ReformatCode<CR>
 
-" basic mapping
 " basic key mapping
 nnoremap L $
 vnoremap H ^
 nnoremap H ^
 vnoremap L $
-nnoremap K %
-vnoremap K %
+nnoremap K i<CR><Esc>
+
+" back and forward
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
