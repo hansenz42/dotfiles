@@ -51,6 +51,7 @@ nnoremap <leader>s :action Stop<CR>
 
 " navigation goto
 nnoremap gi :action GotoImplementation<CR>
+nnoremap <leader>gd :action QuickImplementations<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gf :action FileStructurePopup<CR>
 
