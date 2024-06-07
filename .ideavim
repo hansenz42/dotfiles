@@ -53,7 +53,7 @@ nnoremap <leader>s :action Stop<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap <leader>gd :action QuickImplementations<CR>
 nnoremap gd :action GotoDeclaration<CR>
-nnoremap gf :action FileStructurePopup<CR>
+nnoremap go :action FileStructurePopup<CR>
 
 " code actions
 nnoremap U :action FindUsages<CR>
