@@ -54,12 +54,13 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap <leader>gd :action QuickImplementations<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap go :action FileStructurePopup<CR>
+nnoremap gt :action GotoTypeDeclaration<CR>
 
 " code actions
 nnoremap U :action FindUsages<CR>
 nnoremap R :action RenameElement<CR>
 nnoremap -- :action OptimizeImports<CR>
-" nnoremap cc :action CommentByLineComment<CR>
+nnoremap gc :action CommentByLineComment<CR>
 nnoremap == :action ReformatCode<CR>
 
 " basic key mapping
