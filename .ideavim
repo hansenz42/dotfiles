@@ -20,14 +20,11 @@ nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>c <Action>(CloseAllEditorsButActive)
 
 " selection control
-nnoremap <leader>w v:action EditorSelectWord<CR>
+nnoremap <leader>w :action EditorSelectWord<CR>
 vnoremap <leader>w :action EditorSelectWord<CR>
 
 " hover control
 nmap gh <Action>(ShowHoverInfo)
-
-" copy and paste
-nmap <leader>p \"0p
 
 " scroll option
 set scrolloff=5
@@ -37,17 +34,12 @@ command New action NewFile
 
 " some clipboard settings
 set clipboard+=unnamedplus
-nnoremap <leader>d "_d
-xnoremap <leader>d "_d
+nmap <leader>d \"_d
+nmap <leader>p \"*p
 
 " idea join
 set ideajoin
 set idearefactormode=keep
-
-" run and debug
-nnoremap <leader>d :action Debug<CR>
-nnoremap <leader>r :action Run<CR>
-nnoremap <leader>s :action Stop<CR>
 
 " navigation goto
 nnoremap gi :action GotoImplementation<CR>
