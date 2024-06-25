@@ -52,7 +52,7 @@ nnoremap gt :action GotoTypeDeclaration<CR>
 nnoremap U :action FindUsages<CR>
 nnoremap R :action RenameElement<CR>
 nnoremap -- :action OptimizeImports<CR>
-nnoremap gc :action CommentByLineComment<CR>
+nnoremap <leader>c :action CommentByLineComment<CR>
 nnoremap == :action ReformatCode<CR>
 
 " basic key mapping
@@ -65,3 +65,6 @@ nnoremap K i<CR><Esc>
 " back and forward
 nmap <C-o> :action Back<CR>
 nmap <C-i> :action Forward<CR>
+
+" breakpoints
+nmap <leader>b :action ToggleLineBreakpoint<CR>
