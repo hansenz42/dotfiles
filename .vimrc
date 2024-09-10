@@ -14,18 +14,11 @@ set incsearch
 set foldmethod=syntax
 set nofoldenable
 
-" basic key mapping
-nnoremap L $
-vnoremap H ^
-nnoremap H ^
-vnoremap L $
-nnoremap K %
-vnoremap K %
-nnoremap K i<CR><Esc>
-
-" for clipboard
+vnoremap <leader>d "_d
 nnoremap <leader>d "_d
-xnoremap <leader>d "_d
-nnoremap <leader>p "*p
-xnoremap <leader>p "*p
 
+" replace without yanking
+vnoremap <leader>p "_dp
+
+vnoremap <leader>D "_D
+nnoremap <leader>D "_D
