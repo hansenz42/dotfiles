@@ -8,8 +8,12 @@ set surround
 set incsearch
 set smartcase
 set ignorecase
+set matchit
 
 nnoremap <Leader>sc :nohlsearch<CR>
+
+" explorer control
+nmap <leader>E :NERDTreeFocus<CR>
 
 " tab and editor control
 nmap <c-k> <Action>(NextTab)
@@ -32,11 +36,16 @@ set scrolloff=5
 " input command :New to create new file
 command New action NewFile
 
-" some clipboard settings
+" clipboard settings
 set clipboard+=unnamedplus
-nmap <leader>d \"_d
-nmap <leader>p \"*p
-nmap <leader>D \"_D
+vnoremap <leader>d \"_d
+nnoremap <leader>d \"_d
+
+" replace without yanking
+vnoremap <leader>p \"_dp
+
+vnoremap <leader>D \"_D
+nnoremap <leader>D \"_D
 
 " idea join
 set ideajoin
@@ -48,21 +57,13 @@ nnoremap <leader>gd :action QuickImplementations<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap go :action FileStructurePopup<CR>
 nnoremap gt :action GotoTypeDeclaration<CR>
+nnoremap gu :action FindUsages<CR>
 
 " code actions
-nnoremap U :action FindUsages<CR>
-nnoremap R :action RenameElement<CR>
+nnoremap <leader>cr :action RenameElement<CR>
 nnoremap -- :action OptimizeImports<CR>
-nnoremap <leader>c :action CommentByLineComment<CR>
-vnoremap <leader>c :action CommentByLineComment<CR>
-nnoremap == :action ReformatCode<CR>
-
-" basic key mapping
-nnoremap L $
-vnoremap H ^
-nnoremap H ^
-vnoremap L $
-nnoremap K i<CR><Esc>
+nnoremap <leader>cc :action CommentByLineComment<CR>
+nnoremap <leader>cf :action ReformatCode<CR>
 
 " back and forward
 nmap <C-o> :action Back<CR>
