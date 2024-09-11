@@ -28,7 +28,7 @@ nnoremap <leader>w :action EditorSelectWord<CR>
 vnoremap <leader>w :action EditorSelectWord<CR>
 
 " hover control
-nmap gh <Action>(ShowHoverInfo)
+nmap K <Action>(ShowHoverInfo)
 
 " scroll option
 set scrolloff=5
@@ -52,11 +52,11 @@ set ideajoin
 set idearefactormode=keep
 
 " navigation goto
-nnoremap gi :action GotoImplementation<CR>
+nnoremap gI :action GotoImplementation<CR>
 nnoremap <leader>gd :action QuickImplementations<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap go :action FileStructurePopup<CR>
-nnoremap gt :action GotoTypeDeclaration<CR>
+nnoremap gy :action GotoTypeDeclaration<CR>
 nnoremap gu :action FindUsages<CR>
 
 " code actions
