@@ -13,17 +13,17 @@ set matchit
 nnoremap <Leader>sc :nohlsearch<CR>
 
 " explorer control
-nmap <leader>E :NERDTreeFocus<CR>
+nmap <leader>e :NERDTreeFocus<CR>
 
 " tab and editor control
-nmap <c-k> <Action>(NextTab)
-nmap <c-j> <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
+nmap [b <Action>(PreviousTab)
 nmap <c-w>x <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>L <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>c <Action>(CloseAllEditorsButActive)
 
-" selection control
+" selection
 nnoremap <leader>w :action EditorSelectWord<CR>
 vnoremap <leader>w :action EditorSelectWord<CR>
 
@@ -38,12 +38,13 @@ command New action NewFile
 
 " clipboard settings
 set clipboard+=unnamedplus
+
+" delete
 vnoremap <leader>d \"_d
 nnoremap <leader>d \"_d
 
-" replace without yanking
+" replace
 vnoremap <leader>p \"_dp
-
 vnoremap <leader>D \"_D
 nnoremap <leader>D \"_D
 
@@ -71,3 +72,6 @@ nmap <C-i> :action Forward<CR>
 
 " breakpoints
 nmap <leader>b :action ToggleLineBreakpoint<CR>
+
+" run
+nmap <leader>tt :action RunClass<CR>
