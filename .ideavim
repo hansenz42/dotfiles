@@ -1,7 +1,7 @@
 Plug 'preservim/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
 
 let mapleader=","
-"set easymotion
 set relativenumber number
 " set hlsearch
 set surround
@@ -10,25 +10,39 @@ set smartcase
 set ignorecase
 set matchit
 
-nnoremap <Leader>sc :nohlsearch<CR>
+nnoremap <leader>sc :nohlsearch<CR>
 
 " explorer control
 nmap <leader>e :NERDTreeFocus<CR>
 
 " tab and editor control
 nmap ]b <Action>(NextTab)
+nmap <c-l> <Action>(NextTab)
 nmap [b <Action>(PreviousTab)
+nmap <c-h> <Action>(PreviousTab)
 nmap <c-w>x <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>L <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>H <Action>(MoveEditorToOppositeTabGroup)
 nmap <c-w>c <Action>(CloseAllEditorsButActive)
 
 " selection
-nnoremap <leader>w :action EditorSelectWord<CR>
-vnoremap <leader>w :action EditorSelectWord<CR>
+"nnoremap v :action EditorSelectWord<CR>
+"nnoremap V :action EditorUnSelectWord<CR>
+vnoremap v :action EditorSelectWord<CR>
+vnoremap V :action EditorUnSelectWord<CR>
 
-" hover control
-nmap K <Action>(ShowHoverInfo)
+nnoremap <c-k> i<CR><ESC>
+nnoremap <c-j> J
+
+vnoremap H ^
+vnoremap L $
+vnoremap J 7j
+vnoremap K 7k
+
+nnoremap H ^
+nnoremap L $
+nnoremap J 7j
+nnoremap K 7k
 
 " scroll option
 set scrolloff=5
@@ -71,7 +85,34 @@ nmap <C-o> :action Back<CR>
 nmap <C-i> :action Forward<CR>
 
 " breakpoints
-nmap <leader>b :action ToggleLineBreakpoint<CR>
+nmap gb :action ToggleLineBreakpoint<CR>
 
 " run
 nmap <leader>tt :action RunClass<CR>
+nmap <leader>td :action DebugClass<CR>
+
+" easymotion
+set easymotion
+" map s to <Plug>(easymotion-s) in normal mode
+nmap s <Plug>(easymotion-s)
+
+" telescope
+nmap <leader>ss :action FileStructurePopup<CR>
+nmap <leader>/ :action SearchEverywhere<CR>
+nmap <leader>fr :action RecentFiles<CR>
+
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
