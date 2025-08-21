@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions extract z zsh-syntax-highlighting zsh-vim-mode)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,31 +100,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-MODE_CURSOR_VIINS="#00ff00 blinking bar"
-MODE_CURSOR_REPLACE="$MODE_CURSOR_VIINS #ff0000"
-MODE_CURSOR_VICMD="green block"
-MODE_CURSOR_SEARCH="#ff00ff steady underline"
-MODE_CURSOR_VISUAL="$MODE_CURSOR_VICMD steady bar"
-MODE_CURSOR_VLINE="$MODE_CURSOR_VISUAL #00ffff"
-
-# 开启系统代理
-proxy_on() {
-        export http_proxy=http://127.0.0.1:7890
-        export https_proxy=http://127.0.0.1:7890
-        export no_proxy=127.0.0.1,localhost
-        export HTTP_PROXY=http://127.0.0.1:7890
-        export HTTPS_PROXY=http://127.0.0.1:7890
-        export NO_PROXY=127.0.0.1,localhost
-        echo -e "\033[32m[√] 已开启代理\033[0m"
-}
-
-# 关闭系统代理
-proxy_off(){
-        unset http_proxy
-        unset https_proxy
-        unset no_proxy
-        unset HTTP_PROXY
-        unset HTTPS_PROXY
-        unset NO_PROXY
-        echo -e "\033[31m[×] 已关闭代理\033[0m"
-}
+source /etc/profile.d/clash.sh
